@@ -1,8 +1,8 @@
 spring:
     datasource:
         url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/fitness-metrics}
-        username: ${SPRING_DATASOURCE_USERNAME:fitness-metrics}
-        password: ${SPRING_DATASOURCE_PASSWORD:fitiz-fitness-metrics}
+        username: ${SPRING_DATASOURCE_USERNAME:fitness-metrics}}
+        password: ${SPRING_DATASOURCE_PASSWORD:fitiz-fitness-metrics}}
         driver-class-name: org.postgresql.Driver
     jpa:
         hibernate:
@@ -12,4 +12,4 @@ spring:
                 dialect: org.hibernate.dialect.PostgreSQLDialect
         open-in-view: false
 server:
-    port: 5000
+    port: 8080
