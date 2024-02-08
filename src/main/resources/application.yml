@@ -1,9 +1,11 @@
 spring:
+    application:
+      name: fitness-metrics-service
     datasource:
-        url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/fitness-metrics}
-        username: ${SPRING_DATASOURCE_USERNAME:fitness-metrics}
-        password: ${SPRING_DATASOURCE_PASSWORD:fitiz-fitness-metrics}
-        driver-class-name: org.postgresql.Driver
+      url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/fitness-metrics}
+      username: ${SPRING_DATASOURCE_USERNAME:fitness-metrics}
+      password: ${SPRING_DATASOURCE_PASSWORD:fitiz-fitness-metrics}
+      driver-class-name: org.postgresql.Driver
     jpa:
         hibernate:
             ddl-auto: update
@@ -12,4 +14,9 @@ spring:
                 dialect: org.hibernate.dialect.PostgreSQLDialect
         open-in-view: false
 server:
-    port: 5000
+    port: 9872
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8710/eureka/}

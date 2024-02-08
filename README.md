@@ -1,57 +1,12 @@
-# Fitiz - Fitness Metrics Service
+# Fitiz - Fitness Metrics Service (unfinished)
+### (currently just a storage for the metrics collected from the user)
 
-## Getting Started
 
-### Prerequisites
 
-Make sure you have the following software installed:
-
-- [Java](https://www.oracle.com/java/) 17 or higher
-- [Gradle](https://gradle.org/) 7.x or higher
-
-### Installation
-
-1. Clone this repository to your local machine:
-
-   ```shell
-   git clone https://github.com/fitiz/fitness-metrics-service.git
-
-2. Clone this repository to your local machine:
-
-   ```shell   
-   cd fitness-metrics-service
-
-3. Clone this repository to your local machine:
-
-   ```shell
-   ./gradlew bootRun
-
-### Usage
-
-Once the project is successfully running, you can visit the following URLs in your browser:
-
-- Application: http://localhost:8080
-- Actuator Endpoints: http://localhost:8080/actuator
-
-### Contributing
-
-1. Create a new feature branch:
-
-   ```shell
-    git checkout -b new-feature
-
-2. Commit your changes:
-   ```shell
-    git commit -am 'Added a new feature'
-
-3. Push to the branch:
-   ```shell
-   git push origin new-feature
-
-4. Submit a pull request.
-
-### Formatter
-
-Please use google-java-format to formats Java source code to with Google Java Style:
-
-https://github.com/google/google-java-format/tree/master
+## Files: 
+1. controller/APIController - exposes endpoint where client sends his metrics data to be stored 
+2. eventListeners/FitnessMetricsUpdateListener - listens for fitness metrics updates
+3. events/FitnessMetricsUpdatedEvent - custom event for fitness metrics update
+4. model/* - dto classes
+5. repositories/* - one repository for the actual fitness metrics and one for history data
+6. services/* - one service for storing the data in the corresponding repository
